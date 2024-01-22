@@ -1,0 +1,39 @@
+/* Montserrat Thin */
+@font-face {
+  font-family: "Montserrat";
+  src: url("~assets/fonts/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Montserrat Light */
+@font-face {
+  font-family: "Montserrat";
+  src: url("~assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Montserrat Regular */
+@font-face {
+  font-family: "Montserrat";
+  src: url("~assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Montserrat Bold */
+@font-face {
+  font-family: "Montserrat";
+  src: url("~assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Montserrat Black */
+@font-face {
+  font-family: "Montserrat";
+  src: url("~assets/fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
