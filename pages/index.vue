@@ -2,8 +2,8 @@
   <main>
     <section>
       <div class="flex justify-between">
-        <div>
-          <div class="pl-[80px] pt-[126px]">
+        <div class="flex flex-col justify-end">
+          <div class="pl-[80px] ">
             <h1 class="text-4xl font-bold mb-[15px]">
               Курорт "Миргород" - здесь живет здоровье!
             </h1>
@@ -12,12 +12,12 @@
             >
               Заказать путевку
             </button>
-            <img src="~/assets/images/iconImage.jpg" alt="icon" />
           </div>
           <div>
             <img
               src="~/assets/images/homeImage2.jpg"
               alt="home image"
+              class="w-[100%] h-[100%]"
             />
           </div>
         </div>

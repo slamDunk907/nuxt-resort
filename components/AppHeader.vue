@@ -1,5 +1,7 @@
 <template>
-  <header class="bg-white text-black p-4 fixed top-0 left-0 w-full z-10">
+  <header
+    class="bg-white text-black p-4 fixed top-0 left-0 w-full z-10 shadow-lg"
+  >
     <div class="flex justify-end">
       <div class="flex justify-between mr-2">
         <img src="~/assets/images/phone.svg" alt="phone" />
@@ -16,11 +18,10 @@
       <img class="mr-2" src="~/assets/images/facebook.svg" alt="facebook" />
       <img src="~/assets/images/youtube.svg" alt="youtube" />
     </div>
-    <div class="flex justify-between">
+    <div class="flex justify-between items-center">
       <nuxt-link to="/"
         ><img src="~/assets/images/logo.png" alt="logo"
       /></nuxt-link>
-
       <nav class="mx-auto flex justify-between items-center space-x-10">
         <nuxt-link to="/about">
           <span
@@ -29,12 +30,18 @@
             О НАС
           </span>
         </nuxt-link>
-        <span class="hover-link font-sm font-bold leading-normal tracking-wide"
-          >НАПРАВЛЕНИЯ ОЗДОРОВЛЕНИЯ</span
-        >
-        <span class="hover-link font-sm font-bold leading-normal tracking-wide"
-          >ЦЕНЫ</span
-        >
+        <nuxt-link>
+          <span
+            class="hover-link font-sm font-bold leading-normal tracking-wide"
+            >НАПРАВЛЕНИЯ ОЗДОРОВЛЕНИЯ</span
+          >
+        </nuxt-link>
+        <nuxt-link>
+          <span
+            class="hover-link font-sm font-bold leading-normal tracking-wide"
+            >ЦЕНЫ</span
+          >
+        </nuxt-link>
         <nuxt-link to="/wellness-programs">
           <span
             class="hover-link font-sm font-bold leading-normal tracking-wide"
@@ -47,9 +54,12 @@
             >ГАЛЕРЕЯ</span
           >
         </nuxt-link>
-        <span class="hover-link font-sm font-bold leading-normal tracking-wide"
-          >БЛОГ</span
-        >
+        <nuxt-link>
+          <span
+            class="hover-link font-sm font-bold leading-normal tracking-wide"
+            >БЛОГ</span
+          >
+        </nuxt-link>
         <nuxt-link to="/contact">
           <span
             class="hover-link font-sm font-bold leading-normal tracking-wide"
@@ -62,6 +72,7 @@
 </template>
 
 <style scoped>
+
 .hover-link {
   position: relative;
   text-decoration: none;
@@ -69,11 +80,13 @@
   transition: color 0.3s;
 }
 
-.hover-link:hover {
+.hover-link:hover,
+.router-link-active .hover-link {
   color: #dc0101;
 }
 
-.hover-link::before {
+.hover-link::before,
+.router-link-active .hover-link::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -87,8 +100,12 @@
   margin-top: 5px;
 }
 
+.router-link-active .hover-link::before {
+  width: 70%;
+}
+
 .hover-link:hover::before {
   width: 70%;
 }
 </style>
-<script setup lang="ts"></script>
+

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#60cbdb] text-white p-8">
+  <footer class="bg-[#60cbdb] text-white pt-8">
     <div class="container mx-auto w-[1135px] flex justify-between">
       <h2 class="text-base mr-[40px]">Миргородкурорт</h2>
       <div class="sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8">

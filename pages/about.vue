@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-[126px] pb-[45px] mx-auto max-w-[1135px]">
+  <section class="pb-[45px] mx-auto max-w-[1135px]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
       <div class="col-span-1 md:col-span-1">
         <h2 class="text-3xl font-bold">О нас</h2>

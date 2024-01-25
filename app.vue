@@ -1,6 +1,6 @@
 <template>
   <AppHeader />
-  <div class="page">
+  <div class="page pt-[150px]">
     <NuxtPage />
   </div>
   <AppFooter />

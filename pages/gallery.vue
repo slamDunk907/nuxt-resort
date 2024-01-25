@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-[126px] pb-[45px] mx-auto w-[1135px]">
+  <section class=" pb-[45px] mx-auto w-[1135px]">
     <div>
       <h2 class="text-3xl font-bold text-center pb-[30px]">Галерея</h2>
       <div class="grid grid-cols-3 gap-[20px]">

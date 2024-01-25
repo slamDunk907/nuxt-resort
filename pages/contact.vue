@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-[126px] pb-[45px] mx-auto w-[1135px]">
+  <section class="pb-[45px] mx-auto w-[1135px]">
     <div class="flex justify-between">
       <div class="flex flex-col">
         <img
