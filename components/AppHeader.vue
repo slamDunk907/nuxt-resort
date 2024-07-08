@@ -1,111 +1,79 @@
 <template>
-  <header
-    class="bg-white text-black p-4 fixed top-0 left-0 w-full z-10 shadow-lg"
-  >
-    <div class="flex justify-end">
-      <div class="flex justify-between mr-2">
-        <img src="~/assets/images/phone.svg" alt="phone" />
-        <p class="text-[#d2d2d2]">+38 (050) 405-80-07</p>
+  <header class="bg-white shadow-md h-20 flex items-center">
+    <div class="container mx-auto px-4 flex justify-between items-center h-full">
+      <div class="text-xl font-bold">
+        <NuxtLink to="/">
+          <img :src="logo" alt="MyLogo" class="h-20 w-20 object-contain" />
+        </NuxtLink>
       </div>
-      <div class="flex justify-between mr-2">
-        <img src="~/assets/images/phone.svg" alt="phone" />
-        <p class="text-[#d2d2d2]">+38 (05355) 5-21-25</p>
+      <nav class="hidden md:flex space-x-8">
+        <NuxtLink
+            v-for="link in links"
+            :key="link.href"
+            :to="link.href"
+            :class="[
+            'text-lg text-gray-700 transition duration-300 ease-in-out hover:text-primary transform hover:scale-105',
+            isActive(link.href) ? 'text-primary font-bold' : ''
+          ]"
+        >
+          {{ link.text }}
+        </NuxtLink>
+      </nav>
+      <div class="hidden md:flex space-x-3">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="text-gray-700 hover:text-primary transition duration-300 ease-in-out transform hover:scale-110">
+          <Icon name="uil:instagram" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="text-gray-700 hover:text-primary transition duration-300 ease-in-out transform hover:scale-110">
+          <Icon name="uil:facebook" />
+        </a>
       </div>
-      <div class="flex justify-between mr-2">
-        <img src="~/assets/images/phone.svg" alt="phone" />
-        <p class="text-[#d2d2d2]">+38 (044) 287-06-06</p>
+      <div class="md:hidden">
+        <button @click="toggleMenu" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
       </div>
-      <img class="mr-2" src="~/assets/images/facebook.svg" alt="facebook" />
-      <img src="~/assets/images/youtube.svg" alt="youtube" />
     </div>
-    <div class="flex justify-between items-center">
-      <nuxt-link to="/"
-        ><img src="~/assets/images/logo.png" alt="logo"
-      /></nuxt-link>
-      <nav class="mx-auto flex justify-between items-center space-x-10">
-        <nuxt-link to="/about">
-          <span
-            class="hover-link font-bold font-sm leading-normal tracking-wide"
-          >
-            О НАС
-          </span>
-        </nuxt-link>
-        <nuxt-link>
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >НАПРАВЛЕНИЯ ОЗДОРОВЛЕНИЯ</span
-          >
-        </nuxt-link>
-        <nuxt-link>
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >ЦЕНЫ</span
-          >
-        </nuxt-link>
-        <nuxt-link to="/wellness-programs">
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >ОЗДОРОВИТЕЛЬНЫЕ ПРОГРАММЫ</span
-          >
-        </nuxt-link>
-        <nuxt-link to="/gallery">
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >ГАЛЕРЕЯ</span
-          >
-        </nuxt-link>
-        <nuxt-link>
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >БЛОГ</span
-          >
-        </nuxt-link>
-        <nuxt-link to="/contact">
-          <span
-            class="hover-link font-sm font-bold leading-normal tracking-wide"
-            >КОНТАКТЫ</span
-          >
-        </nuxt-link>
+    <div v-if="isMenuOpen" class="md:hidden bg-white shadow-md">
+      <nav class="flex flex-col space-y-2 p-4">
+        <NuxtLink
+            v-for="link in links"
+            :key="link.href"
+            :to="link.href"
+            :class="[
+            'text-lg text-gray-700 transition duration-300 ease-in-out hover:text-primary hover:underline transform hover:scale-105',
+            isActive(link.href) ? 'text-primary font-bold' : ''
+          ]"
+        >
+          {{ link.text }}
+        </NuxtLink>
       </nav>
     </div>
   </header>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import logo from '@/assets/images/logo.jpg';
 
-.hover-link {
-  position: relative;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
-}
+const isMenuOpen = ref(false);
 
-.hover-link:hover,
-.router-link-active .hover-link {
-  color: #dc0101;
-}
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
-.hover-link::before,
-.router-link-active .hover-link::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background-color: #dc0101;
-  transition: width 0.3s ease-out;
-  margin-top: 5px;
-}
+const links = [
+  { href: '/', text: 'Home' },
+  { href: '/contact', text: 'Contact' }
+];
 
-.router-link-active .hover-link::before {
-  width: 70%;
-}
+const route = useRoute();
 
-.hover-link:hover::before {
-  width: 70%;
-}
-</style>
+const isActive = (href: string) => {
+  return route.path === href;
+};
+</script>
 
+<style scoped></style>
