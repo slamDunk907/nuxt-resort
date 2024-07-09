@@ -19,6 +19,7 @@
     <Treatments />
     <AboutUs />
     <Rewiews />
+    <InfoCard />
   </main>
 </template>
 
