@@ -62,6 +62,7 @@ const toggleMenu = () => {
 const links = [
   { href: "/", text: "Home" },
   { href: "/agreement-nzsu", text: "Agreement with nzsu" },
+  { href: "/resort", text: "Resort" },
   { href: "/contact", text: "Contact" },
 ];
 

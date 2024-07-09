@@ -13,19 +13,17 @@ const items = [
   },
   {
     image: sliderImageThree,
-    title: "Slide 3 Title",
+    title: "КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ",
     buttonText: "Contact us",
     subtext:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab\n" +
-        "            corporis dolores earum, eligendi est harum.",
+        "Відпочинок в санаторії «Бермінводи» це чудове поєднання унікальних оздоровчих процедур, потужної лікувальної бази, висококласного сервісу і приємного дозвілля для гостей будь-якого віку і для будь якого бюджету.",
   },
   {
     image: sliderImageTwo,
-    title: "Slide 2 Title",
+    title: "НСЗУ",
     buttonText: "Learn more",
     subtext:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab\n" +
-        "            corporis dolores earum, eligendi est harum.",
+        "ПрАТ \"КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ\" разом з НСЗУ!",
   },
 ];
 

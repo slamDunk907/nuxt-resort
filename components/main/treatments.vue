@@ -94,7 +94,8 @@ const treatments = [
       " • озокеритотерапія.\n",
   },
   {
-    image: "https://wiki.nvmk.org.ua/images/c/c9/%D0%9E%D0%B7%D0%BE%D0%BA%D0%B5%D1%80%D0%B8%D1%82.jpg",
+    image:
+      "https://wiki.nvmk.org.ua/images/c/c9/%D0%9E%D0%B7%D0%BE%D0%BA%D0%B5%D1%80%D0%B8%D1%82.jpg",
     title: "Теплолікування",
     content:
       "•   інгаляції мінеральною водою\n" +
@@ -104,37 +105,61 @@ const treatments = [
       " • ароматерапія.\n",
   },
   {
-    image: "https://expert-health.com.ua/wp-content/uploads/2022/08/plasmapheresis.jpg",
+    image:
+      "https://expert-health.com.ua/wp-content/uploads/2022/08/plasmapheresis.jpg",
     title: "Еферентна терапія",
     content:
-        "•   плазмаферез;\n" +
-        " •   ВЛОК крові:\n" +
-        " • інфузійна озонотерапія.\n",
+      "•   плазмаферез;\n" +
+      " •   ВЛОК крові:\n" +
+      " • інфузійна озонотерапія.\n",
   },
   {
     image: "https://onco-expert.com.ua/assets/images/news-20.jpg",
     title: "Нетрадиційні методи",
     content:
-        "•   психотерапія, голкорефлексотерапія, хромотерапія, гірудотерапія;\n" +
-        " •   синглентно-киснева терапія;\n" +
-        " •   нехірургічне лікування геморою апаратом\n" +
-        "«Геморрон»;\n" +
-        " •   лікувальна фізкультура: нордична ходьба, лікувальна гімнастика «Master Spin»;\n" +
-        " •   вправи на дошці Євмінова;\n" +
-        " •   теренкур; \n" +
-        " •   косметологічні процедури\n" +
-        " •   Fish-пілінг (пілінг стоп за допомогою рибок).\n",
-  }
+      "•   психотерапія, голкорефлексотерапія, хромотерапія, гірудотерапія;\n" +
+      " •   синглентно-киснева терапія;\n" +
+      " •   нехірургічне лікування геморою апаратом\n" +
+      "«Геморрон»;\n" +
+      " •   лікувальна фізкультура: нордична ходьба, лікувальна гімнастика «Master Spin»;\n" +
+      " •   вправи на дошці Євмінова;\n" +
+      " •   теренкур; \n" +
+      " •   косметологічні процедури\n" +
+      " •   Fish-пілінг (пілінг стоп за допомогою рибок).\n",
+  },
 ];
 
 const formatService = (service: string): string => {
   return service.replace(":", ":<br/>");
+};
+
+const showModal = ref(false);
+const selectedTreatment = ref(null);
+
+const openModal = (treatment: any) => {
+  selectedTreatment.value = treatment;
+  showModal.value = true;
+};
+
+const closeModal = () => {
+  showModal.value = false;
 };
 </script>
 
 <template>
   <div class="mx-auto py-10">
     <h2 class="text-3xl font-bold mb-6 text-center">Treatments</h2>
+    <p class="mb-4">
+      Відпочинок в санаторії «Бермінводи» це чудове поєднання унікальних
+      оздоровчих процедур, потужної лікувальної бази, висококласного сервісу і
+      приємного дозвілля для гостей будь-якого віку і для будь якого бюджету.
+      Тут панує гармонія з природою та постійно лунають пташині переліви. . у
+      санаторії є власна дієтична iдальня яка розрахована на одночасне всіх
+      відпочиваючих. У ідеальні пропонуют попереднє замовлення страв в межах
+      призначеної дієти. При особливій важливості для процесу оздоровлення
+      збалансованого дієтичного харчування, ті, хто прихав тільки відпочити,
+      можуть скористатися ресторанним типом харчування
+    </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div
         v-for="(item, index) in treatments"
@@ -143,7 +168,7 @@ const formatService = (service: string): string => {
       >
         <img
           :src="item.image"
-          alt="Card image"
+          alt="Treatment image"
           class="w-full h-64 object-cover"
         />
         <div class="p-6 flex-grow">
@@ -158,19 +183,59 @@ const formatService = (service: string): string => {
             </li>
           </ul>
         </div>
-        <NuxtLink to="/treatments" class="mt-auto">
-          <UButton
-            size="xl"
-            color="primary"
-            variant="solid"
-            class="w-full rounded-none"
-          >
-            Learn more
-          </UButton>
-        </NuxtLink>
+        <UButton
+          size="xl"
+          color="primary"
+          variant="solid"
+          class="w-full rounded-none"
+          @click="openModal(item)"
+        >
+          Learn more
+        </UButton>
       </div>
     </div>
+    <transition name="fade">
+      <div
+        v-if="showModal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      >
+        <div class="bg-white p-5 rounded-lg shadow-lg max-w-3xl">
+          <h3 class="text-xl font-bold">{{ selectedTreatment.title }}</h3>
+          <p
+            v-html="
+              selectedTreatment.content
+                .split(';')
+                .map(formatService)
+                .join('<br/>')
+            "
+          ></p>
+          <NuxtLink to="/contact">
+            <UButton
+                class="mt-4 mr-3"
+                color="primary"
+            >
+              Order
+            </UButton>
+          </NuxtLink>
+          <UButton
+            class="mt-4"
+            color="red"
+            @click="closeModal"
+          >
+            Close
+          </UButton>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+</style>
