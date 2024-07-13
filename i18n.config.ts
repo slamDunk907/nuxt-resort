@@ -242,7 +242,7 @@ export default defineI18nConfig(() => ({
         " •   ВЛОК крові:\n" +
         " • інфузійна озонотерапія.\n",
       alternative_therapy_title: "Нетрадиційні методи",
-      alternative_therapy_contnent:
+      alternative_therapy_content:
         "•   психотерапія, голкорефлексотерапія, хромотерапія, гірудотерапія;\n" +
         " •   синглентно-киснева терапія;\n" +
         " •   нехірургічне лікування геморою апаратом\n" +
