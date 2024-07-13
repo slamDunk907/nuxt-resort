@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <h2 class="text-3xl font-bold my-6 text-center">
-      КЛІНІЧНИЙ САНАТОРІЙ «КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ»
+      {{ $t('resort_title') }}
     </h2>
     <InfoCard />
     <MainSlider />

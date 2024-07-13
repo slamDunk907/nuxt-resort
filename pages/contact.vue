@@ -10,24 +10,34 @@ import image6 from "@/assets/images/6.jpg";
 <template>
   <div class="flex-container">
     <div class="image-column">
-      <img :src="image1" alt="Image 1">
-      <img :src="image2" alt="Image 2">
+      <img :src="image1" alt="Image 1" />
+      <img :src="image2" alt="Image 2" />
     </div>
     <div class="info-map-column">
-      <h2 class="title">Contact Us</h2>
+      <h2 class="title">{{ $t('contact') }}</h2>
       <div class="contact-info mb-5">
-        <p>Email: <a href="mailto:berminvodysanatory@ukr.net">berminvodysanatory@ukr.net</a></p>
-        <p>Phone: <a href="tel:+380636913408">+380 63 691 3408</a></p>
-        <p>Address: Харківська обл., Дергачівський р-н, с. Березівське</p>
+        <p>
+          {{ $t("email") }}:
+          <a href="mailto:berminvodysanatory@ukr.net"
+            >berminvodysanatory@ukr.net</a
+          >
+        </p>
+        <p>
+          {{ $t("phone") }}: <a href="tel:+380636913408">+380 63 691 3408</a>
+        </p>
+        <p>
+          {{ $t("adress") }} : Харківська обл., Дергачівський р-н, с.
+          Березівське
+        </p>
       </div>
       <div class="map-container my-8">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.4053671125725!2d35.950283626950764!3d50.00375691942555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127978ecc18fcef%3A0x597382a5b011c87e!2z0JHQtdGA0LXQt9C-0LLRgdC60L7QtSwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LA!5e0!3m2!1sru!2s!4v1720563080706!5m2!1sru!2s"
-            width="600"
-            height="450"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.4053671125725!2d35.950283626950764!3d50.00375691942555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127978ecc18fcef%3A0x597382a5b011c87e!2z0JHQtdGA0LXQt9C-0LLRgdC60L7QtSwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LA!5e0!3m2!1sru!2s!4v1720563080706!5m2!1sru!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </div>

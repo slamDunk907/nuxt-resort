@@ -6,24 +6,23 @@ import sliderImageTwo from "assets/images/zdobutki-peremogi-med-sistemi-ua.jpg";
 const items = [
   {
     image: sliderImageOne,
-    title: "КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ",
-    buttonText: "Contact us",
+    title: "resort_title",
+    buttonText: "learn_more",
     subtext:
-      "Тут панує гармонія з природою та постійно лунають пташині переліви.",
+      "slider_text_one",
   },
   {
     image: sliderImageThree,
-    title: "КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ",
-    buttonText: "Contact us",
+    title: "resort_title",
+    buttonText: "learn_more",
     subtext:
-        "Відпочинок в санаторії «Бермінводи» це чудове поєднання унікальних оздоровчих процедур, потужної лікувальної бази, висококласного сервісу і приємного дозвілля для гостей будь-якого віку і для будь якого бюджету.",
+      "slider_text_two",
   },
   {
     image: sliderImageTwo,
-    title: "НСЗУ",
-    buttonText: "Learn more",
-    subtext:
-        "ПрАТ \"КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ\" разом з НСЗУ!",
+    title: "",
+    buttonText: "learn_more",
+    subtext: 'nzsu_title',
   },
 ];
 
@@ -61,11 +60,11 @@ onMounted(() => {
         />
         <div class="absolute inset-0 bg-black bg-opacity-50" />
         <div class="absolute flex flex-col items-center text-center text-white">
-          <h1 class="text-4xl mb-1">{{ item.title }}</h1>
-          <h2 class="text-2xl mb-4">{{ item.subtext }}</h2>
+          <h1 class="text-4xl mb-1">{{ $t(item.title) }}</h1>
+          <h2 class="text-2xl mb-4">{{ $t(item.subtext) }}</h2>
           <NuxtLink to="/contact">
             <UButton size="xl" color="primary" variant="solid">{{
-              item.buttonText
+              $t(item.buttonText)
             }}</UButton>
           </NuxtLink>
         </div>

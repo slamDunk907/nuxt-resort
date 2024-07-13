@@ -1,16 +1,19 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/icon"],
+  modules: ["@nuxt/ui", "@nuxt/icon", "@nuxtjs/i18n"],
   css: ["~/assets/global/index.css"],
   colorMode: {
-    preference: 'light'
+    preference: "light",
   },
   icon: {
-    size: '34px',
-    class: 'icon',
-    mode: 'css',
+    size: "34px",
+    class: "icon",
+    mode: "css",
     aliases: {
-      'nuxt': 'logos:nuxt-icon',
-    }
+      nuxt: "logos:nuxt-icon",
+    },
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts',
   }
 });

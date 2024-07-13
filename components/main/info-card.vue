@@ -4,12 +4,12 @@
       <div class="flex items-center">
         <img :src="nzsu" alt="Sample Image" class="mr-9 w-10 h-16" />
         <p>
-          ПрАТ "КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ" разом з НСЗУ!
+          {{ $t("nzsu_title") }}
         </p>
       </div>
-      <nuxt-link to="/agreement-nzsu" class="text-primary"
-        >Learn more</nuxt-link
-      >
+      <nuxt-link to="/agreement-nzsu" class="text-primary">{{
+        $t("learn_more")
+      }}</nuxt-link>
     </div>
   </div>
 </template>

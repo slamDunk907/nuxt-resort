@@ -35,7 +35,7 @@ const reviews = ref([
 
 <template>
   <div class="mx-auto py-10">
-    <h2 class="text-3xl font-bold mb-6 text-center">Reviews</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center">{{ $t('reviews') }}</h2>
     <div class="grid grid-cols-2 gap-4">
       <div
         v-for="(review, index) in reviews"
