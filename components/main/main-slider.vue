@@ -77,4 +77,10 @@ onMounted(() => {
 .custom-size {
   height: 800px;
 }
+
+@media (max-width: 599px) {
+  .custom-size {
+   display: none;
+  }
+}
 </style>

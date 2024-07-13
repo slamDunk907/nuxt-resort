@@ -16,7 +16,7 @@
             >
           </nav>
         </div>
-        <div class="mb-4 md:mb-0">
+        <div class="mb-4 md:mb-0 hidden sm:block">
           <h3 class="text-lg font-semibold mb-2">{{ $t("contact") }}</h3>
           <p>
             {{ $t("email") }}:

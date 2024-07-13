@@ -3,6 +3,7 @@
     <img
       src="https://dev.astra.ck.ua/wp-content/uploads/2022/08/nszu.jpg"
       alt="nzsu"
+      class="hidden sm:block"
     />
     <div class="content">
       <h1>{{ $t('nzsu_title') }}</h1>

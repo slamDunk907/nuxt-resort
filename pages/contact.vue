@@ -85,4 +85,10 @@ import image6 from "@/assets/images/6.jpg";
   font-size: 1.5em;
   text-align: left;
 }
+
+@media (max-width: 599px) {
+  .image-column {
+    display: none;
+  }
+}
 </style>
