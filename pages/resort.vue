@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-3xl font-bold mb-6 text-center mt-10">Resort</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center mt-10">{{ $t('resort_title') }}</h2>
     <div class="grid grid-cols-3 gap-4">
       <div v-for="image in sortedImages" :key="image.src" class="overflow-hidden">
         <img :src="image.src" :alt="'Image ' + image.id" class="w-full h-auto object-cover">
