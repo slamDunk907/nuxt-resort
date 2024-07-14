@@ -15,5 +15,16 @@ export default defineNuxtConfig({
   },
   i18n: {
     vueI18n: './i18n.config.ts',
+  },
+  app: {
+    head: {
+      title: 'САНАТОРІЙ «КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ»',
+      meta: [
+        { name: 'berminvody resort', content: '' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/assets/images/logo.jpg' }
+      ]
+    }
   }
 });
