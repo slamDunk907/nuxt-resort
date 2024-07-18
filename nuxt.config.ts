@@ -18,9 +18,13 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'САНАТОРІЙ «КУРОРТ БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ»',
+      title: 'Санаторій «Курорт Березівські мінеральні води» - Лікувальний спа-курорт в Харкові',
       meta: [
-        { name: 'berminvody resort', content: '' },
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Санаторій в Харкові з найкращими лікувальними процедурами та мінеральними водами. Відкрийте для себе ідеальне місце для відпочинку та оздоровлення.' },
+        { hid: 'keywords', name: 'keywords', content: 'лікувальний санаторій, санаторій Харків, мінеральні води, спа-курорт, Березівські мінеральні води' },
+        { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/assets/images/logo.jpg' }
