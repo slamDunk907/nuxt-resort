@@ -1,6 +1,22 @@
 <template>
   <div class="container">
     <h2 class="text-3xl font-bold mb-6 text-center mt-10">{{ $t('resort_title') }}</h2>
+    <div class="flex justify-between">
+      <div class="w-3/5">
+        <iframe
+            src="https://player.vimeo.com/video/1002223645"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            class="mb-5 w-full"
+        ></iframe>
+      </div>
+      <div class="w-3/5">
+        <p>{{ $t("video_text") }}</p>
+      </div>
+    </div>
     <div class="grid grid-cols-3 gap-4">
       <div v-for="image in sortedImages" :key="image.src" class="overflow-hidden">
         <img :src="image.src" :alt="'Image ' + image.id" class="w-full h-auto object-cover">

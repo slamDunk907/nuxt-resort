@@ -142,6 +142,8 @@ export default defineI18nConfig(() => ({
         "Attention! FROM APRIL 01, 2024 CHANGES!\n" +
         "\n" +
         'In connection with the resolution of the Cabinet of ministers of Ukraine of 22.12.2023 Nº 1394 Item 7 of the General part, SE "clinical sanatorium "BEREZIVSKIYE Mineralnye Vody"Prjsc"Ukrprofzdravnitsa" in compliance with the above resolution, the selection for hospitalization for medical rehabilitation under the code a57001 takes place only on an extract from the patient\'s medical card no more than two months after the hospital with diagnoses that meet the requirements of the NHS in an electronic direction.  If inpatient rehabilitation under the 2024 medical guarantee program is not possible, you will be offered outpatient rehabilitation.',
+      video_text:
+        "Dear friends, today we have started preparing for the 33rd anniversary of Ukraine's independence!Independence Day of Ukraine is a majestic holiday that symbolizes our freedom, pride and unity. This is the day when the heart of every Ukrainian is filled with love for their native land and faith in its future. Let independence be a source of inspiration for us, and let our dreams and aspirations lead to new achievements.In honor of the beginning of preparations for the Independence Day of Ukraine, we planted an independence Alley consisting of 33 Thuja trees. It is with great pleasure and pride that we share the process of planting trees with you and ask you to share your impressions!",
     },
     uk: {
       welcome: "Ласкаво просимо",
@@ -292,6 +294,8 @@ export default defineI18nConfig(() => ({
         "УВАГА! З 01 КВІТНЯ 2024 ЗМІНИ!\n" +
         "\n" +
         "В звʼязку с постановою КМУ від 22.12.2023р. Nº 1394 пункту 7 Загальної частини, ДП «Клінічний санаторій «БЕРЕЗІВСЬКІ МІНЕРАЛЬНІ ВОДИ»ПрАТ«Укрпрофоздоровниця» на виконання вищевказаної постанови, відбір на ГОСПІТАЛІЗАЦІЮ на медичну реабілітацію по коду А57001 відбувається лише за випискою з медичної карти хворого не більше двох місяців після стаціонару з діагнозами, що відповідають вимогам НСЗУ за електронним направленням. Якщо буде не можливим реабілітація в стаціонарних умовах за Програмою медичних гарантій 2024р., Вам буде пропоновано АМБУЛАТОРНА реабілітація. ",
+      video_text:
+        "Дорогі друзі, сьогодні ми розпочали підготовку до 33-ї річниці незалежності України!День Незалежності України — це величне свято, яке символізує нашу свободу, гордість і єдність. Це день, коли серце кожного українця наповнюється любов’ю до рідної землі і вірою в її майбутнє. Нехай незалежність буде для нас джерелом натхнення, а наші мрії та прагнення приводять до нових досягнень.На честь початку підготовки до Дня незалежності України ми висадили Аллею Незалежності, що складається з 33 туй. Ми з великим задоволенням і гордістю ділимося з вами процесом посадки дерев і просимо вас поділитися своїми враженнями!",
     },
   },
 }));
